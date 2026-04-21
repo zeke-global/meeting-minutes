@@ -1008,12 +1008,14 @@ function openMinute(key) {
 
   document.getElementById('index-page').style.display = 'none';
   document.getElementById('detail-page').style.display = 'block';
+  window.location.hash = key;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function goBack() {
   document.getElementById('detail-page').style.display = 'none';
   document.getElementById('index-page').style.display = 'block';
+  history.pushState('', '', window.location.pathname);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1038,6 +1040,19 @@ function filterMeetings(type, btn) {
   document.getElementById('count-badge').textContent = visible + (visible === 1 ? ' meeting' : ' meetings');
   document.getElementById('empty').style.display = visible === 0 ? 'block' : 'none';
 }
+
+const initialKey = window.location.hash.slice(1);
+if (minutes[initialKey]) openMinute(initialKey);
+
+window.addEventListener('hashchange', () => {
+  const key = window.location.hash.slice(1);
+  if (minutes[key]) {
+    openMinute(key);
+  } else {
+    document.getElementById('detail-page').style.display = 'none';
+    document.getElementById('index-page').style.display = 'block';
+  }
+});
 
 </script>
 
