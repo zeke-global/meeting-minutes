@@ -382,11 +382,12 @@ gap: 10px;
 padding: 8px 0;
 border-bottom: 1px solid #f0ede8;
 font-size: 14px;
+line-height: 1.55;
 color: var(--text);
 }
 .agenda-item:last-child { border-bottom: none; }
 
-.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--dark); margin-top: 5px; flex-shrink: 0; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--dark); margin-top: 6px; flex-shrink: 0; }
 .dot.muted { background: #ccc; }
 .strike { text-decoration: line-through; color: #aaa; }
 
@@ -396,6 +397,7 @@ border-left: 3px solid var(--gold-light);
 border-radius: 0 8px 8px 0;
 padding: 10px 14px;
 font-size: 12.5px;
+line-height: 1.55;
 color: #9a7a50;
 margin-top: 10px;
 }
@@ -405,20 +407,22 @@ margin-top: 10px;
 .disc-item {
 background: #f7f6f3;
 border-radius: 10px;
-padding: 11px 14px;
+padding: 12px 14px;
 font-size: 13.5px;
+line-height: 1.6;
 color: #333;
 display: flex;
 gap: 10px;
 align-items: flex-start;
 }
 
-.disc-icon { font-size: 15px; flex-shrink: 0; }
+.disc-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
 
 .decision-item {
-padding: 9px 0;
+padding: 10px 0;
 border-bottom: 1px solid #f0ede8;
 font-size: 13.5px;
+line-height: 1.6;
 color: var(--text);
 display: flex;
 gap: 10px;
@@ -430,7 +434,7 @@ align-items: flex-start;
 font-family: ‘DM Serif Display’, serif;
 font-size: 18px;
 color: #d4b896;
-line-height: 1;
+line-height: 1.6;
 flex-shrink: 0;
 width: 18px;
 text-align: center;
@@ -443,6 +447,7 @@ gap: 10px;
 padding: 10px 0;
 border-bottom: 1px solid #f0ede8;
 font-size: 13.5px;
+line-height: 1.6;
 color: var(--text);
 }
 .action-item:last-child { border-bottom: none; }
@@ -452,7 +457,7 @@ width: 16px; height: 16px;
 border: 1.5px solid #ccc;
 border-radius: 4px;
 flex-shrink: 0;
-margin-top: 2px;
+margin-top: 3px;
 }
 
 .divider { height: 1px; background: #f0ede8; }
@@ -461,9 +466,10 @@ margin-top: 2px;
 display: flex;
 align-items: flex-start;
 gap: 10px;
-padding: 9px 0;
+padding: 10px 0;
 border-bottom: 1px solid #f0ede8;
 font-size: 13.5px;
+line-height: 1.6;
 color: var(--text);
 }
 .open-agenda-item:last-child { border-bottom: none; }
@@ -685,14 +691,14 @@ const minutes = {
       { icon: "🆓", text: "Trial phase agreed to be free of cost - selected influencers and brands onboarded to gather feedback and identify operational gaps." },
       { icon: "🚀", text: "Trial phase commences upon app launch, focusing on testing, validation, and refinement." },
       { icon: "📈", text: "Upon reaching ~80% of defined objectives, project transitions into Phase 1 with full-scale campaign strategies." },
-      { icon: "💰", text: "Initial investment of AED 10,000 agreed upon, to be equally contributed by all four partners." },
+      { icon: "💰", text: "Initial investment of INR 10,000 agreed upon, to be equally contributed by all four partners." },
       { icon: "🔗", text: "Domain name zekesolutions.com approved and finalised as the official domain." },
     ],
     decisions: [
       "Trial phase will be free - focused on onboarding, feedback, and gap identification.",
       "Phase 1 launches upon achieving ~80% of trial phase objectives.",
       "Commission-based model declined. Zeke Shield (legal protection service) confirmed as the official Phase 1 revenue model.",
-      "Initial investment: AED 10,000, split equally across all four partners.",
+      "Initial investment: INR 10,000, split equally across all four partners.",
       "zekesolutions.com approved as the official domain.",
       "Team leads to submit budget requirements for the initial phase.",
     ],
@@ -821,7 +827,7 @@ const minutes = {
     agendaNote: "📌 Concept presentation postponed to the next meeting.",
     discussion: [
       { icon: "🗂️", text: "Reviewed the updated structure with Sadhim." },
-      { icon: "💰", text: "Jannah's quote: AED 6K total - AED 3K proposed as advance." },
+      { icon: "💰", text: "Jannah's quote: INR 6K total - INR 3K proposed as advance." },
       { icon: "🤝", text: "Defined partner roles and responsibilities." },
     ],
     decisions: [
