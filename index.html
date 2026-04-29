@@ -39,12 +39,12 @@ input, button, select, textarea { color: #2a2a2a !important; background: #fff !i
 
 :root {
 color-scheme: light;
---dark: #1a1a2e;
---cream: #f0ede8;
---gold: #c8b89a;
---gold-light: #e8c99a;
---text: #2a2a2a;
---muted: #9a8a78;
+–dark: #1a1a2e;
+–cream: #f0ede8;
+–gold: #c8b89a;
+–gold-light: #e8c99a;
+–text: #2a2a2a;
+–muted: #9a8a78;
 }
 
 html {
@@ -62,7 +62,7 @@ padding: 0 16px 60px;
 }
 
 /* Force all cards and surfaces to stay light */
-.card, .meeting-card, .filter-btn {
+.card, .meeting-card, .disc-item, .agenda-note, .filter-btn {
 background-color: #fff !important;
 color: #2a2a2a !important;
 }
@@ -85,7 +85,7 @@ margin-bottom: 36px;
 font-size: 10px;
 letter-spacing: 3px;
 text-transform: uppercase;
-color: var(--gold);
+color: var(–gold);
 font-weight: 600;
 margin-bottom: 4px;
 }
@@ -93,19 +93,19 @@ margin-bottom: 4px;
 .brand-title {
 font-family: ‘DM Serif Display’, serif;
 font-size: 34px;
-color: var(--dark);
+color: var(–dark);
 line-height: 1;
 }
 
 .brand-sub {
 font-size: 13px;
-color: var(--muted);
+color: var(–muted);
 margin-top: 3px;
 font-style: italic;
 }
 
 .count-badge {
-background: var(--dark);
+background: var(–dark);
 color: #fff;
 font-size: 11px;
 padding: 6px 14px;
@@ -132,13 +132,13 @@ cursor: pointer;
 transition: all 0.2s;
 font-family: ‘DM Sans’, sans-serif;
 background: #fff;
-color: var(--muted);
+color: var(–muted);
 }
 
 .filter-btn.active, .filter-btn:hover {
-background: var(--dark);
+background: var(–dark);
 color: #fff;
-border-color: var(--dark);
+border-color: var(–dark);
 }
 
 .grid {
@@ -152,7 +152,7 @@ gap: 14px;
 .year-sep {
 font-family: ‘DM Serif Display’, serif;
 font-size: 13px;
-color: var(--gold);
+color: var(–gold);
 letter-spacing: 1px;
 padding: 6px 0 2px;
 border-bottom: 1px solid #ddd8d0;
@@ -179,7 +179,7 @@ content: ‘’;
 position: absolute;
 left: 0; top: 0; bottom: 0;
 width: 3px;
-background: var(--dark);
+background: var(–dark);
 transform: scaleY(0);
 transform-origin: bottom;
 transition: transform 0.2s ease;
@@ -194,7 +194,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-background: var(--cream);
+background: var(–cream);
 border-radius: 12px;
 width: 54px;
 height: 54px;
@@ -202,12 +202,12 @@ flex-shrink: 0;
 transition: background 0.2s;
 }
 
-.meeting-card:hover .date-block { background: var(--dark); }
+.meeting-card:hover .date-block { background: var(–dark); }
 
 .date-day {
 font-family: ‘DM Serif Display’, serif;
 font-size: 22px;
-color: var(--dark);
+color: var(–dark);
 line-height: 1;
 transition: color 0.2s;
 }
@@ -218,12 +218,12 @@ transition: color 0.2s;
 font-size: 9px;
 text-transform: uppercase;
 letter-spacing: 1.5px;
-color: var(--muted);
+color: var(–muted);
 font-weight: 600;
 transition: color 0.2s;
 }
 
-.meeting-card:hover .date-month { color: var(--gold); }
+.meeting-card:hover .date-month { color: var(–gold); }
 
 .card-info { flex: 1; min-width: 0; }
 
@@ -231,29 +231,29 @@ transition: color 0.2s;
 font-size: 9.5px;
 letter-spacing: 2px;
 text-transform: uppercase;
-color: var(--gold);
+color: var(–gold);
 font-weight: 600;
 margin-bottom: 4px;
 }
 
 .card-title {
 font-size: 15px;
-font-weight: 400;
-color: var(--text);
+font-weight: 600;
+color: var(–text);
 white-space: normal;
 word-break: break-word;
 }
 
 .card-participants {
 font-size: 12px;
-color: var(--muted);
+color: var(–muted);
 margin-top: 3px;
 }
 
 .card-arrow { color: #ccc; transition: all 0.2s; flex-shrink: 0; }
-.meeting-card:hover .card-arrow { color: var(--dark); transform: translateX(4px); }
+.meeting-card:hover .card-arrow { color: var(–dark); transform: translateX(4px); }
 
-.empty { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 14px; display: none; }
+.empty { text-align: center; padding: 60px 20px; color: var(–muted); font-size: 14px; display: none; }
 .empty-icon { font-size: 36px; margin-bottom: 12px; }
 
 @keyframes fadeUp {
@@ -281,13 +281,13 @@ font-size: 13px;
 font-weight: 500;
 cursor: pointer;
 transition: color 0.2s;
-background: none !important;
+background: none;
 border: none;
 font-family: ‘DM Sans’, sans-serif;
 padding: 0;
 }
 
-.back-btn:hover { color: var(--dark); }
+.back-btn:hover { color: var(–dark); }
 .back-btn:hover svg { transform: translateX(-3px); }
 .back-btn svg { transition: transform 0.2s; }
 
@@ -303,7 +303,7 @@ animation: fadeUp 0.4s ease both;
 }
 
 .header {
-background: var(--dark);
+background: var(–dark);
 padding: 36px 36px 28px;
 position: relative;
 overflow: hidden;
@@ -331,7 +331,7 @@ background: rgba(255,255,255,0.03);
 display: inline-block;
 background: rgba(200,184,154,0.18);
 border: 1px solid rgba(200,184,154,0.3);
-color: var(--gold);
+color: var(–gold);
 font-size: 10px;
 letter-spacing: 2.5px;
 text-transform: uppercase;
@@ -382,22 +382,20 @@ gap: 10px;
 padding: 8px 0;
 border-bottom: 1px solid #f0ede8;
 font-size: 14px;
-line-height: 1.55;
-color: var(--text);
+color: var(–text);
 }
-.agenda-item:last-child { border-bottom: none; }
+.agenda-item:last-of-type { border-bottom: none; }
 
-.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--dark); margin-top: 6px; flex-shrink: 0; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(–dark); margin-top: 5px; flex-shrink: 0; }
 .dot.muted { background: #ccc; }
 .strike { text-decoration: line-through; color: #aaa; }
 
 .agenda-note {
 background: #fff8f0;
-border-left: 3px solid var(--gold-light);
+border-left: 3px solid var(–gold-light);
 border-radius: 0 8px 8px 0;
 padding: 10px 14px;
 font-size: 12.5px;
-line-height: 1.55;
 color: #9a7a50;
 margin-top: 10px;
 }
@@ -407,23 +405,21 @@ margin-top: 10px;
 .disc-item {
 background: #f7f6f3;
 border-radius: 10px;
-padding: 12px 14px;
+padding: 11px 14px;
 font-size: 13.5px;
-line-height: 1.6;
 color: #333;
 display: flex;
 gap: 10px;
 align-items: flex-start;
 }
 
-.disc-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+.disc-icon { font-size: 15px; flex-shrink: 0; }
 
 .decision-item {
-padding: 10px 0;
+padding: 9px 0;
 border-bottom: 1px solid #f0ede8;
 font-size: 13.5px;
-line-height: 1.6;
-color: var(--text);
+color: var(–text);
 display: flex;
 gap: 10px;
 align-items: flex-start;
@@ -434,7 +430,7 @@ align-items: flex-start;
 font-family: ‘DM Serif Display’, serif;
 font-size: 18px;
 color: #d4b896;
-line-height: 1.6;
+line-height: 1;
 flex-shrink: 0;
 width: 18px;
 text-align: center;
@@ -447,8 +443,7 @@ gap: 10px;
 padding: 10px 0;
 border-bottom: 1px solid #f0ede8;
 font-size: 13.5px;
-line-height: 1.6;
-color: var(--text);
+color: var(–text);
 }
 .action-item:last-child { border-bottom: none; }
 
@@ -457,7 +452,7 @@ width: 16px; height: 16px;
 border: 1.5px solid #ccc;
 border-radius: 4px;
 flex-shrink: 0;
-margin-top: 3px;
+margin-top: 2px;
 }
 
 .divider { height: 1px; background: #f0ede8; }
@@ -466,11 +461,10 @@ margin-top: 3px;
 display: flex;
 align-items: flex-start;
 gap: 10px;
-padding: 10px 0;
+padding: 9px 0;
 border-bottom: 1px solid #f0ede8;
 font-size: 13.5px;
-line-height: 1.6;
-color: var(--text);
+color: var(–text);
 }
 .open-agenda-item:last-child { border-bottom: none; }
 
@@ -502,7 +496,7 @@ align-items: center;
 .footer-note { font-size: 11px; color: #bbb; }
 
 .next-tag {
-background: var(--dark);
+background: var(–dark);
 color: #fff;
 font-size: 11px;
 padding: 5px 12px;
@@ -533,7 +527,7 @@ letter-spacing: 0.5px;
       <div class="brand-title">Minutes</div>
       <div class="brand-sub">Internal meeting records</div>
     </div>
-    <div class="count-badge" id="count-badge">7 meetings</div>
+    <div class="count-badge" id="count-badge">8 meetings</div>
   </div>
 
   <div class="filters">
@@ -543,6 +537,20 @@ letter-spacing: 0.5px;
 
   <div class="grid" id="grid">
     <div class="year-sep" data-type="partners">2026</div>
+
+```
+<div class="meeting-card" data-type="partners" onclick="openMinute('apr28')">
+  <div class="date-block">
+    <div class="date-day">28</div>
+    <div class="date-month">Apr</div>
+  </div>
+  <div class="card-info">
+    <div class="card-type">Partners Meeting</div>
+    <div class="card-title">Brand Strategy, Fund Allocation & Department Budgets</div>
+    <div class="card-participants">Mufeed · Sadhim · Fidha</div>
+  </div>
+  <svg class="card-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+</div>
 
 <div class="meeting-card" data-type="partners" onclick="openMinute('apr21')">
   <div class="date-block">
@@ -636,6 +644,7 @@ letter-spacing: 0.5px;
 </div>
 
 <!-- ➕ PASTE NEW MEETING CARDS HERE (copy the block above) -->
+```
 
   </div>
 
@@ -675,6 +684,36 @@ letter-spacing: 0.5px;
 
 const minutes = {
 
+  apr28: {
+    badge: "Partners Meeting",
+    title: "Brand Strategy, Fund Allocation & Department Budgets",
+    date: "28 April 2026",
+    participants: "Mufeed · Sadhim · Fidha",
+    agenda: [
+      { text: "Digital marketing footprint", done: true },
+      { text: "Fund allocation", done: true },
+      { text: "Department expense estimation", done: true },
+    ],
+    agendaNote: null,
+    discussion: [
+      { icon: "📊", text: "Sadhim presented the brand strategy roadmap and branding kit proposal. Pending team approval." },
+      { icon: "🎯", text: "Full working application to be completed for a full-fledged release targeting GCC investors." },
+    ],
+    decisions: [
+      "Brand kit proposal to be reviewed and approved by all partners.",
+      "Each partner to contribute AED 2,500 by 30 April for domain purchase.",
+      "Full app build to target GCC investors for a full-fledged release.",
+      "All members to submit base-level department budget requirements.",
+    ],
+    actions: [
+      "All partners to review and approve Sadhim's brand strategy and branding kit.",
+      "Each partner to contribute AED 2,500 by 30 April for domain purchase.",
+      "All members to share base-level department budget requirements.",
+    ],
+    next: "Next: Brand Kit Approval & Budget Submissions",
+    footerNote: "Zeke · Partners Meeting",
+  },
+
   apr21: {
     badge: "Partners Meeting",
     title: "Revenue Model & Domain Finalisation",
@@ -687,18 +726,18 @@ const minutes = {
     agendaNote: null,
     discussion: [
       { icon: "💡", text: "Evaluated pros and cons of a commission-based approach during trial phase vs. introducing Zeke Shield in the first phase." },
-      { icon: "🛡️", text: "After evaluating both approaches, the team aligned on Zeke Shield as the official Phase 1 revenue model. Zeke Shield provides legal protection and platform guarantees to verified users on a fee basis, while unverified users can join the platform at no cost." },
+      { icon: "🛡️", text: "Commission-based model declined. Zeke Shield - a legal protection service for verified users - confirmed as the official Phase 1 revenue model. Verified users pay a fee and receive legal protection and platform guarantees; unverified users join free." },
       { icon: "🆓", text: "Trial phase agreed to be free of cost - selected influencers and brands onboarded to gather feedback and identify operational gaps." },
       { icon: "🚀", text: "Trial phase commences upon app launch, focusing on testing, validation, and refinement." },
       { icon: "📈", text: "Upon reaching ~80% of defined objectives, project transitions into Phase 1 with full-scale campaign strategies." },
-      { icon: "💰", text: "Initial investment of INR 10,000 agreed upon, to be equally contributed by all four partners." },
+      { icon: "💰", text: "Initial investment of AED 10,000 agreed upon, to be equally contributed by all four partners." },
       { icon: "🔗", text: "Domain name zekesolutions.com approved and finalised as the official domain." },
     ],
     decisions: [
       "Trial phase will be free - focused on onboarding, feedback, and gap identification.",
       "Phase 1 launches upon achieving ~80% of trial phase objectives.",
       "Commission-based model declined. Zeke Shield (legal protection service) confirmed as the official Phase 1 revenue model.",
-      "Initial investment: INR 10,000, split equally across all four partners.",
+      "Initial investment: AED 10,000, split equally across all four partners.",
       "zekesolutions.com approved as the official domain.",
       "Team leads to submit budget requirements for the initial phase.",
     ],
@@ -818,7 +857,7 @@ const minutes = {
     badge: "Partners Meeting",
     title: "Weekly Partner Sync",
     date: "10 April 2026",
-    participants: "Sadhim · Mufeed",
+    participants: "Sadhim &amp; Mufeed",
     agenda: [
       { text: "Concept presentation - department-wise", done: false, struck: true },
       { text: "Colour template finalisation", done: true },
@@ -827,7 +866,7 @@ const minutes = {
     agendaNote: "📌 Concept presentation postponed to the next meeting.",
     discussion: [
       { icon: "🗂️", text: "Reviewed the updated structure with Sadhim." },
-      { icon: "💰", text: "Jannah's quote: INR 6K total - INR 3K proposed as advance." },
+      { icon: "💰", text: "Jannah's quote: AED 6K total - AED 3K proposed as advance." },
       { icon: "🤝", text: "Defined partner roles and responsibilities." },
     ],
     decisions: [
@@ -977,12 +1016,12 @@ function openMinute(key) {
           <div class="discussion-items">${discussionHTML}</div>
         </div>
 
+        ${decisionsHTML ? `
         <div class="divider"></div>
-
         <div>
           <div class="section-label">Decisions</div>
           ${decisionsHTML}
-        </div>
+        </div>` : ''}
 
         ${openAgendasHTML ? `
         <div class="divider"></div>
@@ -1008,14 +1047,12 @@ function openMinute(key) {
 
   document.getElementById('index-page').style.display = 'none';
   document.getElementById('detail-page').style.display = 'block';
-  window.location.hash = key;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function goBack() {
   document.getElementById('detail-page').style.display = 'none';
   document.getElementById('index-page').style.display = 'block';
-  history.pushState('', '', window.location.pathname);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1040,19 +1077,6 @@ function filterMeetings(type, btn) {
   document.getElementById('count-badge').textContent = visible + (visible === 1 ? ' meeting' : ' meetings');
   document.getElementById('empty').style.display = visible === 0 ? 'block' : 'none';
 }
-
-const initialKey = window.location.hash.slice(1);
-if (minutes[initialKey]) openMinute(initialKey);
-
-window.addEventListener('hashchange', () => {
-  const key = window.location.hash.slice(1);
-  if (minutes[key]) {
-    openMinute(key);
-  } else {
-    document.getElementById('detail-page').style.display = 'none';
-    document.getElementById('index-page').style.display = 'block';
-  }
-});
 
 </script>
 
